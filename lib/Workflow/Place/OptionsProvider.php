@@ -15,7 +15,8 @@
 namespace Pimcore\Workflow\Place;
 
 use Pimcore\Helper\ContrastColor;
-use Pimcore\Model\DataObject\ClassDefinition\DynamicOptionsProvider\Data;
+use Pimcore\Model\DataObject\ClassDefinition\Data\Multiselect;
+use Pimcore\Model\DataObject\ClassDefinition\Data\Select;
 use Pimcore\Model\DataObject\ClassDefinition\DynamicOptionsProvider\SelectOptionsProviderInterface;
 use Pimcore\Workflow\Manager;
 use Pimcore\Workflow\MarkingStore\DataObjectSplittedStateMarkingStore;
@@ -41,7 +42,7 @@ class OptionsProvider implements SelectOptionsProviderInterface
 
     /**
      * @param array $context
-     * @param Data $fieldDefinition
+     * @param Select|Multiselect $fieldDefinition
      *
      * @return array
      *
